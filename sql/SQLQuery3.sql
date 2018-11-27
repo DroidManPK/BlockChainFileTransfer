@@ -1,0 +1,2 @@
+create table accounts(pubKey nvarchar(105) not null PRIMARY KEY, cname nvarchar(50) not null,pass nvarchar(50) not null, RSA nvarchar(max));
+create table trans(id nvarchar(65) not null PRIMARY KEY,pubKeyA nvarchar(105) references accounts(pubKey),RSA nvarchar(max),pubKeyB nvarchar(105) references accounts(pubKey),Ttype nvarchar(50),filenam nvarchar(50));
